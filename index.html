@@ -5,193 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nithin Deepa — Portfolio</title>
   <meta name="description" content="Portfolio of Nithin Deepa — Software Developer & Data Analyst." />
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            darkred: '#8B0000',
-            lightred: '#e63946',
-            darkblack: '#0a0a0a'
-          },
-          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system"] },
-          boxShadow: { soft: '0 12px 30px rgba(0,0,0,.3)' }
-        }
-      }
-    }
-  </script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    body { background: #0a0a0a; color: white; }
-    .section-card { background:#111; border:1px solid #2a2a2a; }
-    .highlight { color:#e63946; }
-    .tick::before { content:'✔'; color:#e63946; margin-right:8px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* Smooth fade + slide animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Scroll smoothness */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar shadow */
+    header {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Hover effects */
+    a, button {
+      transition: all 0.3s ease;
+    }
+    a:hover, button:hover {
+      transform: scale(1.03);
+    }
+
+    /* Hero section subtle motion */
+    .hero {
+      animation: fadeIn 1.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
   </style>
 </head>
-<body class="font-sans">
-
+<body>
   <!-- Navbar -->
-  <header class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur border-b border-lightred">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
-      <a href="#top" class="text-2xl font-extrabold tracking-tight text-lightred">Nithin<span class="text-white">.</span></a>
-      <div class="flex items-center gap-5 text-sm font-semibold">
-        <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="hover:text-lightred">LinkedIn</a>
-        <a href="https://github.com/ndeepa-cloud" target="_blank" class="hover:text-lightred">GitHub</a>
-        <a href="https://ig.me/21IGFLvyxEMZbYn" target="_blank" class="hover:text-lightred">Instagram</a>
-        <a href="https://www.youtube.com/channel/UCBt4ZV9UgeV26EwsP5ONZzg" target="_blank" class="hover:text-lightred">YouTube</a>
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur z-50">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-extrabold">Nithin<span class="text-gray-400">.</span></h1>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#about" class="hover:text-black">About</a>
+        <a href="#projects" class="hover:text-black">Projects</a>
+        <a href="#contact" class="hover:text-black">Contact</a>
+        <a href="resume.pdf" target="_blank" class="bg-black text-white px-4 py-2 rounded-md hover:opacity-80">Résumé</a>
       </div>
     </nav>
   </header>
 
   <!-- Hero -->
-  <main id="top" class="max-w-7xl mx-auto px-6 pt-32">
-    <section class="grid md:grid-cols-2 gap-12 items-center pb-20">
-      <div id="hero-text" class="opacity-0 translate-y-8">
-        <h1 class="text-5xl font-extrabold">Hi, I’m <span class="highlight">Nithin Deepa</span>.</h1>
-        <p class="mt-4 text-xl text-gray-200 font-semibold">Software Developer • Data Analyst • Leader</p>
-        <p class="mt-4 text-gray-300 font-medium max-w-2xl">I build scalable apps and dashboards that blend logic, creativity, and technology.</p>
-        <div class="mt-8 flex gap-4">
-          <a data-resume target="_blank" class="px-6 py-3 rounded-xl bg-lightred text-white font-semibold hover:bg-darkred">Resume →</a>
-          <a href="#projects" class="px-6 py-3 rounded-xl border border-lightred text-lightred hover:bg-lightred hover:text-white font-semibold">Projects →</a>
-        </div>
+  <section class="hero flex flex-col-reverse md:flex-row justify-between items-center max-w-6xl mx-auto px-6 pt-32 md:pt-40 pb-16 gap-8">
+    <div>
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Hi, I’m <span class="text-black">Nithin Deepa</span></h2>
+      <p class="text-gray-600 text-lg mb-4">Computer Science Student • Software Developer • Data Analyst</p>
+      <p class="text-gray-600 mb-6">I love building software that blends logic and creativity — from data-driven dashboards to full-stack applications.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="resume.pdf" target="_blank" class="bg-black text-white px-5 py-2 rounded-md shadow hover:opacity-80">Download Résumé</a>
+        <a href="https://github.com/ndeepa-cloud" target="_blank" class="border border-gray-300 px-5 py-2 rounded-md hover:bg-gray-50">GitHub</a>
+        <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="border border-gray-300 px-5 py-2 rounded-md hover:bg-gray-50">LinkedIn</a>
       </div>
-      <div id="hero-photo" class="flex justify-center md:justify-end opacity-0 scale-95">
-        <img id="heroPhoto" alt="Nithin portrait" class="w-72 h-72 object-cover rounded-3xl shadow-soft border border-lightred" />
-      </div>
-    </section>
+    </div>
+    <div class="flex justify-center">
+      <img src="headshot.jpg" alt="Nithin portrait" class="rounded-2xl shadow-md w-64 h-64 object-cover border border-gray-200" />
+    </div>
+  </section>
 
-    <!-- About Me -->
-    <section id="about" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-4">About Me</h2>
-      <p class="text-gray-300 max-w-3xl leading-relaxed">
-        I’m a Computer Science student at Murray State University (Class of 2027). I specialize in software development and data analytics, combining technical skills with leadership and creativity.
-      </p>
-    </section>
+  <!-- About -->
+  <section id="about" class="fade-up max-w-6xl mx-auto px-6 py-20 border-t border-gray-200">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="text-gray-600 leading-relaxed mb-4">
+      I’m a Computer Science major at Murray State University (Class of 2027), passionate about creating meaningful digital experiences. 
+      I’ve led multiple projects focusing on software development, data analytics, and cloud computing. My goal is to craft innovative, user-centered solutions that simplify technology for everyone.
+    </p>
+    <ul class="list-disc list-inside text-gray-700 space-y-1">
+      <li>Languages: Python, Java, JavaScript, SQL</li>
+      <li>Frameworks: Flask, React, Node.js</li>
+      <li>Tools: Git, Docker, AWS, PostgreSQL</li>
+    </ul>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-8">Skills</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="section-card p-6 rounded-2xl">
-          <h3 class="text-xl font-bold text-lightred mb-3">Technical Skills</h3>
-          <ul class="space-y-2">
-            <li class="tick">Python, Java, JavaScript/TypeScript, SQL</li>
-            <li class="tick">Flask, React, Node.js</li>
-            <li class="tick">Pandas, NumPy, Matplotlib</li>
-            <li class="tick">Git, Docker, Cloud (AWS/GCP)</li>
-          </ul>
-        </div>
-        <div class="section-card p-6 rounded-2xl">
-          <h3 class="text-xl font-bold text-lightred mb-3">Core Competencies</h3>
-          <ul class="space-y-2">
-            <li class="tick">Agile/Scrum, SDLC, System Design</li>
-            <li class="tick">Problem-Solving & Algorithms</li>
-            <li class="tick">Team Leadership & Collaboration</li>
-            <li class="tick">Public Speaking & Communication</li>
-          </ul>
-        </div>
+  <!-- Projects -->
+  <section id="projects" class="fade-up max-w-6xl mx-auto px-6 py-20 border-t border-gray-200">
+    <h2 class="text-3xl font-bold mb-8">Featured Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="p-6 border border-gray-200 rounded-2xl bg-white hover:shadow-lg transition-all duration-300">
+        <h3 class="text-lg font-semibold mb-2">Python Quiz App</h3>
+        <p class="text-gray-600 mb-3">Developed an interactive Python quiz app using Tkinter and JSON with real-time analytics using Matplotlib.</p>
+        <p class="text-sm text-gray-500">Python · Tkinter · Matplotlib · JSON</p>
       </div>
-    </section>
+      <div class="p-6 border border-gray-200 rounded-2xl bg-white hover:shadow-lg transition-all duration-300">
+        <h3 class="text-lg font-semibold mb-2">Expense Tracker</h3>
+        <p class="text-gray-600 mb-3">Built a full-stack expense tracking app with Flask & SQLite. Integrated authentication and CRUD operations.</p>
+        <p class="text-sm text-gray-500">Flask · SQLite · REST API</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Work Experience -->
-    <section id="experience" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-8">Work Experience</h2>
-      <div class="section-card p-6 rounded-2xl">
-        <h3 class="text-xl font-bold">Computer Science Tutor — Superprof</h3>
-        <p class="text-gray-400 mb-3">2024–Present | Remote</p>
-        <ul class="space-y-2">
-          <li class="tick">Tutored Python, Java, and SQL fundamentals.</li>
-          <li class="tick">Improved learners’ practical understanding and outcomes.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Leadership -->
-    <section id="leadership" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-8">Leadership</h2>
-      <div class="section-card p-6 rounded-2xl">
-        <h3 class="text-xl font-bold">President — Indian Students Association (ISA)</h3>
-        <p class="text-gray-400 mb-3">2024–Present | Murray State University</p>
-        <ul class="space-y-2">
-          <li class="tick">Led a student team and coordinated major cultural events.</li>
-          <li class="tick">Increased participation by 30% through strategic engagement.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-8">Certifications</h2>
-      <div class="section-card p-6 rounded-2xl">
-        <ul class="space-y-2">
-          <li class="tick">Python Programming — GP Intuition (2023)</li>
-          <li class="tick">C Programming — GP Intuition (2023)</li>
-          <li class="tick">Data Analytics Foundations — Coursera (2024)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-8">Projects</h2>
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-        <div class="section-card p-6 rounded-2xl">
-          <h3 class="text-xl font-bold">Python Quiz Application</h3>
-          <p class="text-gray-300">Tkinter + JSON quiz app with analytics charts (Matplotlib).</p>
-        </div>
-        <div class="section-card p-6 rounded-2xl">
-          <h3 class="text-xl font-bold">Expense Tracker</h3>
-          <p class="text-gray-300">Flask + SQLite app for tracking and analyzing expenses.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20">
-      <h2 class="text-3xl font-extrabold text-lightred mb-8">Contact Me</h2>
-      <div class="flex gap-4">
-        <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" class="px-6 py-3 bg-lightred rounded-xl font-semibold hover:bg-darkred">LinkedIn</a>
-        <a href="mailto:deepanithinroy9@gmail.com" class="px-6 py-3 border border-lightred rounded-xl text-lightred hover:bg-lightred hover:text-white font-semibold">Email</a>
-        <a data-resume target="_blank" class="px-6 py-3 border border-lightred rounded-xl text-lightred hover:bg-lightred hover:text-white font-semibold">Resume →</a>
-      </div>
-    </section>
-  </main>
+  <!-- Contact -->
+  <section id="contact" class="fade-up max-w-6xl mx-auto px-6 py-20 border-t border-gray-200 text-center">
+    <h2 class="text-3xl font-bold mb-4">Let’s Connect</h2>
+    <p class="text-gray-600 mb-8">Interested in collaborating or hiring? Feel free to reach me below — I’d love to connect!</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="bg-black text-white px-6 py-3 rounded-md hover:opacity-80">LinkedIn</a>
+      <a href="mailto:deepanithinroy9@gmail.com" class="border border-gray-300 px-6 py-3 rounded-md hover:bg-gray-50">Email</a>
+      <a href="resume.pdf" target="_blank" class="border border-gray-300 px-6 py-3 rounded-md hover:bg-gray-50">Résumé</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="border-t border-lightred py-6 text-center text-gray-400 text-sm">
-    © <span id="year"></span> Nithin Deepa. All rights reserved.
+  <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+    <p>© <span id="year"></span> Nithin Deepa. All rights reserved.</p>
   </footer>
 
-  <!-- GSAP + Auto-Path Fix -->
   <script>
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('section').forEach(sec => {
-      gsap.from(sec, {opacity: 0, y: 60, duration: 1, ease: 'power2.out', scrollTrigger: {trigger: sec, start: 'top 80%'}});
-    });
+    // Year auto-update
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Auto path fix for resume & photo
-    (function () {
-      var path = window.location.pathname;
-      var base = "/";
-      var m = path.match(/^\\/([^\\/]+)\\//);
-      if (m) base = "/" + m[1] + "/";
-      var resumeURL = base + "resume.pdf";
-      var photoURL  = base + "headshot.jpg";
-      document.querySelectorAll('a[data-resume]').forEach(a => a.href = resumeURL);
-      var img = document.getElementById("heroPhoto");
-      if (img) img.src = photoURL;
-    })();
+    // Scroll animations
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
