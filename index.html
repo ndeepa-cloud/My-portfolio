@@ -15,11 +15,10 @@
           colors: {
             darkred: '#8B0000',
             lightred: '#e63946',
-            darkblack: '#0a0a0a',
-            grayish: '#121212'
+            darkblack: '#0a0a0a'
           },
           fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system"] },
-          boxShadow: { soft: '0 12px 30px rgba(0,0,0,.2)' }
+          boxShadow: { soft: '0 12px 30px rgba(0,0,0,.3)' }
         }
       }
     }
@@ -45,7 +44,7 @@
   <header class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur border-b border-lightred">
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
       <a href="#top" class="text-2xl font-extrabold tracking-tight text-lightred">Nithin<span class="text-white">.</span></a>
-      <div class="flex items-center gap-5">
+      <div class="flex items-center gap-5 text-sm font-semibold">
         <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="hover:text-lightred">LinkedIn</a>
         <a href="https://github.com/ndeepa-cloud" target="_blank" class="hover:text-lightred">GitHub</a>
         <a href="https://ig.me/21IGFLvyxEMZbYn" target="_blank" class="hover:text-lightred">Instagram</a>
@@ -60,21 +59,23 @@
       <div id="hero-text" class="opacity-0 translate-y-8">
         <h1 class="text-5xl font-extrabold">Hi, I’m <span class="highlight">Nithin Deepa</span>.</h1>
         <p class="mt-4 text-xl text-gray-200 font-semibold">Software Developer • Data Analyst • Leader</p>
-        <p class="mt-4 text-gray-300 font-medium max-w-2xl">I build scalable applications, data-driven dashboards, and impactful solutions blending creativity and technology.</p>
+        <p class="mt-4 text-gray-300 font-medium max-w-2xl">I build scalable apps and dashboards that blend logic, creativity, and technology.</p>
         <div class="mt-8 flex gap-4">
-          <a href="resume.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-lightred text-white font-semibold hover:bg-darkred">Resume →</a>
+          <a data-resume target="_blank" class="px-6 py-3 rounded-xl bg-lightred text-white font-semibold hover:bg-darkred">Resume →</a>
           <a href="#projects" class="px-6 py-3 rounded-xl border border-lightred text-lightred hover:bg-lightred hover:text-white font-semibold">Projects →</a>
         </div>
       </div>
       <div id="hero-photo" class="flex justify-center md:justify-end opacity-0 scale-95">
-        <img src="headshot.jpg" alt="Nithin portrait" class="w-72 h-72 object-cover rounded-3xl shadow-soft border border-lightred" />
+        <img id="heroPhoto" alt="Nithin portrait" class="w-72 h-72 object-cover rounded-3xl shadow-soft border border-lightred" />
       </div>
     </section>
 
     <!-- About Me -->
     <section id="about" class="py-20">
       <h2 class="text-3xl font-extrabold text-lightred mb-4">About Me</h2>
-      <p class="text-gray-300 max-w-3xl leading-relaxed">I’m a Computer Science student at Murray State University (Class of 2027). I love building user‑focused software and analyzing data to deliver actionable insights. I’m passionate about development, analytics, and leadership.</p>
+      <p class="text-gray-300 max-w-3xl leading-relaxed">
+        I’m a Computer Science student at Murray State University (Class of 2027). I specialize in software development and data analytics, combining technical skills with leadership and creativity.
+      </p>
     </section>
 
     <!-- Skills -->
@@ -86,17 +87,17 @@
           <ul class="space-y-2">
             <li class="tick">Python, Java, JavaScript/TypeScript, SQL</li>
             <li class="tick">Flask, React, Node.js</li>
-            <li class="tick">Pandas, NumPy, Matplotlib, Machine Learning Basics</li>
-            <li class="tick">Git, Docker, Cloud (AWS, GCP)</li>
+            <li class="tick">Pandas, NumPy, Matplotlib</li>
+            <li class="tick">Git, Docker, Cloud (AWS/GCP)</li>
           </ul>
         </div>
         <div class="section-card p-6 rounded-2xl">
           <h3 class="text-xl font-bold text-lightred mb-3">Core Competencies</h3>
           <ul class="space-y-2">
-            <li class="tick">Agile/Scrum Development</li>
-            <li class="tick">System Design and Data Structures</li>
+            <li class="tick">Agile/Scrum, SDLC, System Design</li>
+            <li class="tick">Problem-Solving & Algorithms</li>
             <li class="tick">Team Leadership & Collaboration</li>
-            <li class="tick">Public Speaking & Project Management</li>
+            <li class="tick">Public Speaking & Communication</li>
           </ul>
         </div>
       </div>
@@ -109,9 +110,8 @@
         <h3 class="text-xl font-bold">Computer Science Tutor — Superprof</h3>
         <p class="text-gray-400 mb-3">2024–Present | Remote</p>
         <ul class="space-y-2">
-          <li class="tick">Tutored Python, Java, SQL, and programming fundamentals.</li>
-          <li class="tick">Developed custom study materials for student understanding.</li>
-          <li class="tick">Increased learner engagement and project completion rates.</li>
+          <li class="tick">Tutored Python, Java, and SQL fundamentals.</li>
+          <li class="tick">Improved learners’ practical understanding and outcomes.</li>
         </ul>
       </div>
     </section>
@@ -123,9 +123,8 @@
         <h3 class="text-xl font-bold">President — Indian Students Association (ISA)</h3>
         <p class="text-gray-400 mb-3">2024–Present | Murray State University</p>
         <ul class="space-y-2">
-          <li class="tick">Led event planning and collaboration across student bodies.</li>
-          <li class="tick">Enhanced event participation and cultural engagement.</li>
-          <li class="tick">Managed budgets and university partnerships effectively.</li>
+          <li class="tick">Led a student team and coordinated major cultural events.</li>
+          <li class="tick">Increased participation by 30% through strategic engagement.</li>
         </ul>
       </div>
     </section>
@@ -148,11 +147,11 @@
       <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
         <div class="section-card p-6 rounded-2xl">
           <h3 class="text-xl font-bold">Python Quiz Application</h3>
-          <p class="text-gray-300">Built using Tkinter, JSON, and Matplotlib for real-time analytics.</p>
+          <p class="text-gray-300">Tkinter + JSON quiz app with analytics charts (Matplotlib).</p>
         </div>
         <div class="section-card p-6 rounded-2xl">
           <h3 class="text-xl font-bold">Expense Tracker</h3>
-          <p class="text-gray-300">Flask + SQLite web app with login, CSV export, and reporting.</p>
+          <p class="text-gray-300">Flask + SQLite app for tracking and analyzing expenses.</p>
         </div>
       </div>
     </section>
@@ -163,6 +162,7 @@
       <div class="flex gap-4">
         <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" class="px-6 py-3 bg-lightred rounded-xl font-semibold hover:bg-darkred">LinkedIn</a>
         <a href="mailto:deepanithinroy9@gmail.com" class="px-6 py-3 border border-lightred rounded-xl text-lightred hover:bg-lightred hover:text-white font-semibold">Email</a>
+        <a data-resume target="_blank" class="px-6 py-3 border border-lightred rounded-xl text-lightred hover:bg-lightred hover:text-white font-semibold">Resume →</a>
       </div>
     </section>
   </main>
@@ -172,18 +172,27 @@
     © <span id="year"></span> Nithin Deepa. All rights reserved.
   </footer>
 
+  <!-- GSAP + Auto-Path Fix -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('section').forEach((sec) => {
-      gsap.from(sec, {
-        opacity: 0,
-        y: 60,
-        duration: 1,
-        ease: 'power2.out',
-        scrollTrigger: { trigger: sec, start: 'top 80%' }
-      });
+    gsap.utils.toArray('section').forEach(sec => {
+      gsap.from(sec, {opacity: 0, y: 60, duration: 1, ease: 'power2.out', scrollTrigger: {trigger: sec, start: 'top 80%'}});
     });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto path fix for resume & photo
+    (function () {
+      var path = window.location.pathname;
+      var base = "/";
+      var m = path.match(/^\\/([^\\/]+)\\//);
+      if (m) base = "/" + m[1] + "/";
+      var resumeURL = base + "resume.pdf";
+      var photoURL  = base + "headshot.jpg";
+      document.querySelectorAll('a[data-resume]').forEach(a => a.href = resumeURL);
+      var img = document.getElementById("heroPhoto");
+      if (img) img.src = photoURL;
+    })();
   </script>
 </body>
 </html>
+
