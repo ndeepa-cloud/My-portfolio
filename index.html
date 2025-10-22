@@ -42,11 +42,11 @@
     .section-card { background:#fff; border:1px solid #ececec; }
   </style>
 </head>
-<body class="font-sans text-neutral-900">
+<body class="font-sans text-black">
   <!-- Navbar with apps on right -->
-  <header class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur border-b border-neutral-200">
+  <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 h-16">
-      <a href="#top" class="text-xl font-extrabold tracking-tight">Nithin<span class="text-neutral-400">.</span></a>
+      <a href="#top" class="text-2xl font-extrabold tracking-tight">Nithin<span class="text-neutral-400">.</span></a>
       <div class="flex items-center gap-5">
         <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" aria-label="LinkedIn" class="p-1"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5H4.5V23.5H.5V8.5zM8.5 8.5h3.83v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.09v8.91h-4v-7.9c0-1.88-.03-4.29-2.61-4.29-2.61 0-3.01 2.04-3.01 4.15v8.04h-3.81V8.5z"/></svg></a>
         <a href="https://github.com/ndeepa-cloud" target="_blank" aria-label="GitHub" class="p-1"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
@@ -56,16 +56,16 @@
     </nav>
   </header>
 
-  <!-- Hero with wider layout and darker white -->
+  <!-- Hero -->
   <main id="top" class="max-w-7xl mx-auto px-5">
     <section class="grid md:grid-cols-2 gap-12 items-center pt-28 sm:pt-36 pb-16">
       <div id="hero-text" class="opacity-0 translate-y-8">
         <h1 class="text-5xl font-extrabold leading-tight">Hi, I’m Nithin Deepa<span class="text-neutral-400">.</span></h1>
-        <p class="mt-4 text-lg text-neutral-600">Computer Science Student • Software Developer • Data Analyst</p>
-        <p class="mt-4 text-neutral-700 max-w-2xl">I build clean, performant apps and data solutions. Explore my work and experience below.</p>
+        <p class="mt-4 text-lg text-black/80 font-semibold">Software Developer • Data Analyst • CS @ Murray State</p>
+        <p class="mt-4 text-black font-medium max-w-2xl">I build user‑focused products with clean UIs, reliable APIs, and measurable results. Scroll to learn more.</p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="resume.pdf" target="_blank" class="btn px-5 py-3 rounded-xl bg-black text-white shadow-soft">Resume →</a>
-          <a href="#projects" class="btn px-5 py-3 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50">Projects →</a>
+          <a href="resume.pdf" target="_blank" class="btn px-5 py-3 rounded-xl bg-black text-white shadow-soft font-semibold">Resume →</a>
+          <a href="#projects" class="btn px-5 py-3 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 font-semibold">Projects →</a>
         </div>
       </div>
       <div id="hero-photo" class="flex justify-center md:justify-end opacity-0 scale-95">
@@ -73,74 +73,117 @@
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ORDERED SECTIONS: About → Skills → Work Experience → Leadership → Certifications -->
+
+    <!-- About Me -->
     <section id="about" class="py-20">
       <div class="grid lg:grid-cols-3 gap-10 items-start">
         <div class="lg:col-span-1 opacity-0 translate-y-8 about-a">
-          <h2 class="text-3xl font-bold">About Me</h2>
-          <p class="mt-3 text-neutral-600">Quick snapshot of who I am and what I do.</p>
+          <h2 class="text-3xl font-extrabold">About Me</h2>
+          <p class="mt-3 text-black/80 font-medium">Quick snapshot of who I am and what I do.</p>
         </div>
         <div class="lg:col-span-2 space-y-4 opacity-0 translate-y-8 about-b">
-          <p>I’m a Computer Science student at Murray State University (2023–2027). I love building user‑focused software, clean APIs, and data pipelines. I’m currently seeking internships in Software Development or Data Analytics.</p>
-          <ul class="list-disc list-inside text-neutral-800">
-            <li>Languages & Tools: Python, Java, JavaScript/TypeScript, SQL, React, Node, Docker</li>
-            <li>Data: Pandas, NumPy, Matplotlib; basics of scikit‑learn</li>
-            <li>Practices: Agile/Scrum, testing, documentation</li>
+          <p class="font-medium">I’m a Computer Science student (2023–2027) at Murray State University. I love building user‑first software, clean APIs, and data pipelines. I’m seeking internships in Software Development or Data Analytics.</p>
+          <p class="font-medium">Strengths: problem‑solving, communication, leadership, and shipping projects end‑to‑end.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills with ticks -->
+    <section id="skills" class="py-20">
+      <h2 class="text-3xl font-extrabold opacity-0 translate-y-8 skills-a">Skills</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-8 opacity-0 translate-y-8 skills-b">
+        <div class="section-card p-6 rounded-2xl">
+          <h3 class="font-bold mb-3">Technical</h3>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Python, Java, JavaScript/TypeScript, SQL</span></li>
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Flask, React, Node.js</span></li>
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Pandas, NumPy, Matplotlib (analytics)</span></li>
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Git, Docker, Linux, Cloud basics (AWS/GCP/Azure)</span></li>
+          </ul>
+        </div>
+        <div class="section-card p-6 rounded-2xl">
+          <h3 class="font-bold mb-3">Core Competencies</h3>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">SDLC, Requirement Analysis, Agile/Scrum</span></li>
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Algorithm Design & Data Structures</span></li>
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Testing, Debugging, Documentation</span></li>
+            <li class="flex items-start gap-2"><span>✔</span><span class="font-medium">Communication, Time Management, Public Speaking</span></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Projects (NOW 4 CARDS; easy to add more) -->
+    <!-- Work Experience -->
+    <section id="experience" class="py-20">
+      <h2 class="text-3xl font-extrabold opacity-0 translate-y-8 exp-a">Work Experience</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="section-card p-6 rounded-2xl opacity-0 translate-y-8 exp-1">
+          <h3 class="font-bold">Computer Science & Mathematics Tutor — Superprof</h3>
+          <p class="text-black/80 font-semibold text-sm">2024–Present · Remote</p>
+          <ul class="mt-3 space-y-2">
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Tutored Python, Java, SQL; adapted teaching to learning styles.</span></li>
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Reinforced real‑world problem solving and coding best practices.</span></li>
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Tracked progress and improved outcomes for multiple students.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="py-20">
+      <h2 class="text-3xl font-extrabold opacity-0 translate-y-8 lead-a">Leadership</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="section-card p-6 rounded-2xl opacity-0 translate-y-8 lead-1">
+          <h3 class="font-bold">President — Indian Students Association (ISA)</h3>
+          <p class="text-black/80 font-semibold text-sm">2024–Present · Murray State University</p>
+          <ul class="mt-3 space-y-2">
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Led a 4‑member team; increased participation by ~30%.</span></li>
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Planned events using feedback & data‑driven decisions.</span></li>
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Handled logistics and cross‑group coordination.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="py-20">
+      <h2 class="text-3xl font-extrabold opacity-0 translate-y-8 cert-a">Certifications</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="section-card p-6 rounded-2xl opacity-0 translate-y-8 cert-1">
+          <ul class="space-y-2">
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">Python Programming — GP intuition (2023)</span></li>
+            <li class="flex gap-2"><span>✔</span><span class="font-medium">C Programming — GP intuition (2023)</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects (unchanged anchor so your button works) -->
     <section id="projects" class="py-20">
       <div class="flex items-end justify-between gap-4 opacity-0 translate-y-8 projects-a">
         <div>
-          <h2 class="text-3xl font-bold">Projects</h2>
-          <p class="mt-3 text-neutral-600">A few things I’ve built recently.</p>
+          <h2 class="text-3xl font-extrabold">Projects</h2>
+          <p class="mt-3 text-black/80 font-medium">A few things I’ve built recently.</p>
         </div>
-        <a href="https://github.com/ndeepa-cloud" target="_blank" class="btn px-4 py-2 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50">All Repos →</a>
+        <a href="https://github.com/ndeepa-cloud" target="_blank" class="btn px-4 py-2 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 font-semibold">All Repos →</a>
       </div>
-
       <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-        <!-- Card template: duplicate to add more -->
         <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-1">
-          <h3 class="font-semibold text-lg">Python Quiz Application</h3>
-          <p class="mt-2 text-neutral-700">GUI quiz app (Tkinter + JSON) with analytics charts (Matplotlib). Role: Team Lead.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Python</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Tkinter</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Matplotlib</span>
-          </div>
+          <h3 class="font-bold">Python Quiz Application</h3>
+          <p class="mt-2 font-medium text-black/90">GUI quiz app (Tkinter + JSON) with analytics charts (Matplotlib). Role: Team Lead.</p>
         </article>
-
         <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-2">
-          <h3 class="font-semibold text-lg">Expense Tracker</h3>
-          <p class="mt-2 text-neutral-700">Flask + SQLite app for secure expense logging, CSV export, and simple reporting.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Flask</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">SQLite</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">REST</span>
-          </div>
+          <h3 class="font-bold">Expense Tracker</h3>
+          <p class="mt-2 font-medium text-black/90">Flask + SQLite app for secure expense logging, CSV export, and simple reporting.</p>
         </article>
-
         <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-3">
-          <h3 class="font-semibold text-lg">Data Analytics Dashboard</h3>
-          <p class="mt-2 text-neutral-700">Sales insights with Pandas/NumPy, visualized via Matplotlib; BI‑style dashboards.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Python</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Pandas</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Matplotlib</span>
-          </div>
+          <h3 class="font-bold">Data Analytics Dashboard</h3>
+          <p class="mt-2 font-medium text-black/90">Sales insights with Pandas/NumPy, visualized via Matplotlib; BI‑style dashboards.</p>
         </article>
-
         <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-4">
-          <h3 class="font-semibold text-lg">Java OOP Patterns — Blob Game</h3>
-          <p class="mt-2 text-neutral-700">Implemented Strategy, Observer, Decorator, Factory & Adapter with tests.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Java</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">JUnit</span>
-            <span class="px-2 py-1 rounded-lg bg-neutral-100">Design Patterns</span>
-          </div>
+          <h3 class="font-bold">Java OOP Patterns — Blob Game</h3>
+          <p class="mt-2 font-medium text-black/90">Implemented Strategy, Observer, Decorator, Factory & Adapter with tests.</p>
         </article>
       </div>
     </section>
@@ -148,12 +191,12 @@
     <!-- Contact -->
     <section id="contact" class="py-20">
       <div class="max-w-2xl opacity-0 translate-y-8 contact-a">
-        <h2 class="text-3xl font-bold">Let’s Connect</h2>
-        <p class="mt-3 text-neutral-700">The fastest way to reach me is on LinkedIn. I’m open to internships and collaborations.</p>
+        <h2 class="text-3xl font-extrabold">Let’s Connect</h2>
+        <p class="mt-3 text-black/80 font-medium">Reach me for internships and collaborations.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="btn px-5 py-3 rounded-2xl bg-black text-white shadow-soft">LinkedIn</a>
-          <a href="mailto:deepanithinroy9@gmail.com" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50">Email</a>
-          <a href="resume.pdf" target="_blank" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50">Resume →</a>
+          <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="btn px-5 py-3 rounded-2xl bg-black text-white shadow-soft font-semibold">LinkedIn</a>
+          <a href="mailto:deepanithinroy9@gmail.com" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50 font-semibold">Email</a>
+          <a href="resume.pdf" target="_blank" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50 font-semibold">Resume →</a>
         </div>
       </div>
     </section>
@@ -161,8 +204,8 @@
 
   <footer class="border-t border-neutral-200 py-10">
     <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-neutral-500 text-sm">© <span id="year"></span> Nithin Deepa. All rights reserved.</p>
-      <div class="flex items-center gap-4 text-sm">
+      <p class="text-black/80 font-medium text-sm">© <span id="year"></span> Nithin Deepa. All rights reserved.</p>
+      <div class="flex items-center gap-4 text-sm font-semibold">
         <a href="https://github.com/ndeepa-cloud" target="_blank" class="hover:underline">GitHub</a>
         <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="hover:underline">LinkedIn</a>
         <a href="https://ig.me/21IGFLvyxEMZbYn" target="_blank" class="hover:underline">Instagram</a>
@@ -183,16 +226,31 @@
     gsap.to('.about-a', {scrollTrigger:{trigger:'#about', start:'top 80%'}, opacity:1, y:0, duration:.9, ease:'power2.out'});
     gsap.to('.about-b', {scrollTrigger:{trigger:'#about', start:'top 72%'}, opacity:1, y:0, duration:.9, ease:'power2.out', delay:.1});
 
-    // Projects head + cards
-    gsap.to('.projects-a', {scrollTrigger:{trigger:'#projects', start:'top 82%'}, opacity:1, y:0, duration:.9, ease:'power2.out'});
+    // Skills
+    gsap.to('.skills-a', {scrollTrigger:{trigger:'#skills', start:'top 80%'}, opacity:1, y:0, duration:.9});
+    gsap.to('.skills-b', {scrollTrigger:{trigger:'#skills', start:'top 72%'}, opacity:1, y:0, duration:.9, delay:.1});
+
+    // Experience
+    gsap.to('.exp-a', {scrollTrigger:{trigger:'#experience', start:'top 80%'}, opacity:1, y:0, duration:.9});
+    gsap.to('.exp-1', {scrollTrigger:{trigger:'.exp-1', start:'top 85%'}, opacity:1, y:0, duration:.9});
+
+    // Leadership
+    gsap.to('.lead-a', {scrollTrigger:{trigger:'#leadership', start:'top 80%'}, opacity:1, y:0, duration:.9});
+    gsap.to('.lead-1', {scrollTrigger:{trigger:'.lead-1', start:'top 85%'}, opacity:1, y:0, duration:.9});
+
+    // Certifications
+    gsap.to('.cert-a', {scrollTrigger:{trigger:'#certifications', start:'top 80%'}, opacity:1, y:0, duration:.9});
+    gsap.to('.cert-1', {scrollTrigger:{trigger:'.cert-1', start:'top 85%'}, opacity:1, y:0, duration:.9});
+
+    // Projects
+    gsap.to('.projects-a', {scrollTrigger:{trigger:'#projects', start:'top 82%'}, opacity:1, y:0, duration:.9});
     ['.proj-1','.proj-2','.proj-3','.proj-4'].forEach((sel,i)=>{
-      gsap.to(sel, {scrollTrigger:{trigger: sel, start:'top 85%'}, opacity:1, y:0, duration:.9, ease:'power2.out', delay:i*0.05});
+      gsap.to(sel, {scrollTrigger:{trigger: sel, start:'top 85%'}, opacity:1, y:0, duration:.9, delay:i*0.05});
     });
 
     // Contact
-    gsap.to('.contact-a', {scrollTrigger:{trigger:'#contact', start:'top 82%'}, opacity:1, y:0, duration:.9, ease:'power2.out'});
+    gsap.to('.contact-a', {scrollTrigger:{trigger:'#contact', start:'top 82%'}, opacity:1, y:0, duration:.9});
 
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
