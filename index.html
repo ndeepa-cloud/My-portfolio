@@ -38,6 +38,7 @@
     .btn { transition: transform .2s ease, opacity .2s ease; }
     .btn:hover { transform: translateY(-1px); opacity:.9; }
     .section-card { background:#fff; border:1px solid #ececec; }
+    .tick::before { content:'✔'; color:#10b981; margin-right:8px; }
   </style>
 </head>
 <body class="font-sans">
@@ -69,42 +70,71 @@
 
   <!-- Hero -->
   <main id="top" class="max-w-7xl mx-auto px-5">
-    <section class="grid md:grid-cols-2 gap-12 items-center pt-28 sm:pt-36 pb-16">
+    <section class="grid md:grid-cols-2 gap-12 items-center pt-28 sm:pt-36 pb-10">
       <div id="hero-text" class="opacity-0 translate-y-8">
         <h1 class="text-5xl font-extrabold leading-tight">Hi, I’m Nithin Deepa<span class="text-neutral-400">.</span></h1>
         <p class="mt-4 text-lg text-neutral-700">Computer Science Student • Software Developer • Data Analyst</p>
         <p class="mt-4 text-neutral-800 max-w-2xl">I build clean, performant apps and data solutions. Explore my work and experience below.</p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="resume.pdf" target="_blank" class="btn px-5 py-3 rounded-xl bg-black text-white shadow-soft">Resume →</a>
+          <a data-resume target="_blank" class="btn px-5 py-3 rounded-xl bg-black text-white shadow-soft">Resume →</a>
           <a href="#projects" class="btn px-5 py-3 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50">Projects →</a>
         </div>
       </div>
       <div id="hero-photo" class="flex justify-center md:justify-end opacity-0 scale-95">
-        <img src="headshot.jpg" alt="Nithin portrait" class="w-72 h-72 object-cover rounded-3xl shadow-soft border border-neutral-200"/>
+        <img id="heroPhoto" alt="Nithin portrait" class="w-72 h-72 object-cover rounded-3xl shadow-soft border border-neutral-200"/>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-20">
-      <div class="grid lg:grid-cols-3 gap-10 items-start">
-        <div class="lg:col-span-1 opacity-0 translate-y-8 about-a">
-          <h2 class="text-3xl font-extrabold">About Me</h2>
-          <p class="mt-3 text-neutral-700">Quick snapshot of who I am and what I do.</p>
+    <!-- 1) About Me -->
+    <section id="about" class="py-14">
+      <h2 class="text-3xl font-extrabold">About Me</h2>
+      <p class="mt-4 text-neutral-800 max-w-3xl">
+        I’m a Computer Science student at Murray State University (Class of 2027). I specialize in software development and data analytics,
+        combining technical skills with leadership, communication, and a focus on results.
+      </p>
+    </section>
+
+    <!-- 2) Education -->
+    <section id="education" class="py-14">
+      <h2 class="text-3xl font-extrabold">Education</h2>
+      <div class="mt-6 section-card p-6 rounded-2xl">
+        <h3 class="text-xl font-semibold">B.S. in Computer Science — Murray State University</h3>
+        <p class="text-neutral-600">2023–2027</p>
+        <ul class="mt-3 space-y-2">
+          <li class="tick">Core: Data Structures, OOP (Java), Databases (SQL), Web Dev</li>
+          <li class="tick">Interests: Full-stack apps, data analytics, cloud</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3) Skills -->
+    <section id="skills" class="py-14">
+      <h2 class="text-3xl font-extrabold">Skills</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div class="section-card p-6 rounded-2xl">
+          <h3 class="font-bold mb-3">Technical</h3>
+          <ul class="space-y-2">
+            <li class="tick">Python, Java, JavaScript/TypeScript, SQL</li>
+            <li class="tick">Flask, React, Node.js</li>
+            <li class="tick">Pandas, NumPy, Matplotlib</li>
+            <li class="tick">Git, Docker, Linux, Cloud basics (AWS/GCP)</li>
+          </ul>
         </div>
-        <div class="lg:col-span-2 space-y-4 opacity-0 translate-y-8 about-b">
-          <p>I’m a Computer Science student at Murray State University (2023–2027). I love building user-focused software, clean APIs, and data pipelines. I’m currently seeking internships in Software Development or Data Analytics.</p>
-          <ul class="list-disc list-inside text-neutral-900">
-            <li>Languages & Tools: Python, Java, JavaScript/TypeScript, SQL, React, Node, Docker</li>
-            <li>Data: Pandas, NumPy, Matplotlib; basics of scikit-learn</li>
-            <li>Practices: Agile/Scrum, testing, documentation</li>
+        <div class="section-card p-6 rounded-2xl">
+          <h3 class="font-bold mb-3">Core Competencies</h3>
+          <ul class="space-y-2">
+            <li class="tick">System Design, SDLC, Agile/Scrum</li>
+            <li class="tick">Algorithms & Problem-solving</li>
+            <li class="tick">Testing, Debugging, Documentation</li>
+            <li class="tick">Communication & Time Management</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Projects (4 cards) -->
-    <section id="projects" class="py-20">
-      <div class="flex items-end justify-between gap-4 opacity-0 translate-y-8 projects-a">
+    <!-- 4) Projects -->
+    <section id="projects" class="py-14">
+      <div class="flex items-end justify-between gap-4">
         <div>
           <h2 class="text-3xl font-extrabold">Projects</h2>
           <p class="mt-3 text-neutral-700">A few things I’ve built recently.</p>
@@ -112,44 +142,97 @@
         <a href="https://github.com/ndeepa-cloud" target="_blank" class="btn px-4 py-2 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50">All Repos →</a>
       </div>
 
-      <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-1">
+      <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition proj-1">
           <h3 class="font-semibold text-lg">Python Quiz Application</h3>
           <p class="mt-2 text-neutral-700">GUI quiz app (Tkinter + JSON) with analytics charts (Matplotlib). Role: Team Lead.</p>
         </article>
 
-        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-2">
+        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition proj-2">
           <h3 class="font-semibold text-lg">Expense Tracker</h3>
-          <p class="mt-2 text-neutral-700">Flask + SQLite app for secure expense logging, CSV export, and simple reporting.</p>
+          <p class="mt-2 text-neutral-700">Flask + SQLite app for secure expense logging, CSV export, and reporting.</p>
         </article>
 
-        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-3">
+        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition proj-3">
           <h3 class="font-semibold text-lg">Data Analytics Dashboard</h3>
           <p class="mt-2 text-neutral-700">Sales insights with Pandas/NumPy, visualized via Matplotlib; BI-style dashboards.</p>
         </article>
 
-        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition opacity-0 translate-y-8 proj-4">
+        <article class="section-card p-6 rounded-2xl hover:shadow-soft transition proj-4">
           <h3 class="font-semibold text-lg">Java OOP Patterns — Blob Game</h3>
           <p class="mt-2 text-neutral-700">Implemented Strategy, Observer, Decorator, Factory & Adapter with tests.</p>
         </article>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20">
-      <div class="max-w-2xl opacity-0 translate-y-8 contact-a">
+    <!-- 5) Experience -->
+    <section id="experience" class="py-14">
+      <h2 class="text-3xl font-extrabold">Experience</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <article class="section-card p-6 rounded-2xl exp-1">
+          <h3 class="font-bold">Computer Science & Mathematics Tutor — Superprof</h3>
+          <p class="text-neutral-600 text-sm">2024–Present · Remote</p>
+          <ul class="mt-3 space-y-2">
+            <li class="tick">Tutored Python, Java, SQL; adapted teaching for learning styles.</li>
+            <li class="tick">Reinforced real-world problem solving and best practices.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6) Leadership Experience -->
+    <section id="leadership" class="py-14">
+      <h2 class="text-3xl font-extrabold">Leadership Experience</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <article class="section-card p-6 rounded-2xl lead-1">
+          <h3 class="font-bold">President — Indian Students Association (ISA)</h3>
+          <p class="text-neutral-600 text-sm">2024–Present · Murray State University</p>
+          <ul class="mt-3 space-y-2">
+            <li class="tick">Led a team and increased participation ~30% through initiatives.</li>
+            <li class="tick">Planned events using feedback and data-driven decisions.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7) Achievements -->
+    <section id="achievements" class="py-14">
+      <h2 class="text-3xl font-extrabold">Achievements</h2>
+      <div class="mt-6 section-card p-6 rounded-2xl">
+        <ul class="space-y-2">
+          <li class="tick">Built and shipped multiple academic & personal projects.</li>
+          <li class="tick">Led student events as ISA President.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8) Certifications -->
+    <section id="certifications" class="py-14">
+      <h2 class="text-3xl font-extrabold">Certifications</h2>
+      <div class="mt-6 section-card p-6 rounded-2xl">
+        <ul class="space-y-2">
+          <li class="tick">Python Programming — GP Intuition (2023)</li>
+          <li class="tick">C Programming — GP Intuition (2023)</li>
+          <li class="tick">Data Analytics Foundations — Coursera (2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact (bonus) -->
+    <section id="contact" class="py-16">
+      <div class="max-w-2xl">
         <h2 class="text-3xl font-extrabold">Let’s Connect</h2>
         <p class="mt-3 text-neutral-800">The fastest way to reach me is on LinkedIn. I’m open to internships and collaborations.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="btn px-5 py-3 rounded-2xl bg-black text-white shadow-soft">LinkedIn</a>
           <a href="mailto:deepanithinroy9@gmail.com" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50">Email</a>
-          <a href="resume.pdf" target="_blank" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50">Resume →</a>
+          <a data-resume target="_blank" class="btn px-5 py-3 rounded-2xl border border-neutral-300 bg-white hover:bg-neutral-50">Resume →</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-top border-neutral-200 py-10">
+  <footer class="border-t border-neutral-200 py-10">
     <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-neutral-600 text-sm">© <span id="year"></span> Nithin Deepa. All rights reserved.</p>
       <div class="flex items-center gap-4 text-sm">
@@ -161,29 +244,41 @@
     </div>
   </footer>
 
-  <!-- GSAP animations -->
+  <!-- GSAP animations + Auto-path for resume/photo -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero
+    // Animate hero
     gsap.to('#hero-text',  {opacity:1, y:0, duration:1.0, ease:'power3.out', delay:.05});
     gsap.to('#hero-photo', {opacity:1, scale:1, duration:1.1, ease:'power3.out', delay:.2});
 
-    // About
-    gsap.to('.about-a', {scrollTrigger:{trigger:'#about', start:'top 80%'}, opacity:1, y:0, duration:.9, ease:'power2.out'});
-    gsap.to('.about-b', {scrollTrigger:{trigger:'#about', start:'top 72%'}, opacity:1, y:0, duration:.9, ease:'power2.out', delay:.1});
-
-    // Projects head + cards
-    gsap.to('.projects-a', {scrollTrigger:{trigger:'#projects', start:'top 82%'}, opacity:1, y:0, duration:.9, ease:'power2.out'});
-    ['.proj-1','.proj-2','.proj-3','.proj-4'].forEach((sel,i)=>{
-      gsap.to(sel, {scrollTrigger:{trigger: sel, start:'top 85%'}, opacity:1, y:0, duration:.9, ease:'power2.out', delay:i*0.05});
-    });
-
-    // Contact
-    gsap.to('.contact-a', {scrollTrigger:{trigger:'#contact', start:'top 82%'}, opacity:1, y:0, duration:.9, ease:'power2.out'});
+    // Animate each section smoothly
+    gsap.utils.toArray('#about, #education, #skills, #projects, #experience, #leadership, #achievements, #certifications, #contact')
+      .forEach((sec, i) => {
+        gsap.from(sec, {opacity:0, y:50, duration:0.9, ease:'power2.out',
+          scrollTrigger: { trigger: sec, start: 'top 85%' }
+        });
+      });
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto path fix for resume & photo (works for both user and project pages)
+    (function () {
+      var path = window.location.pathname;
+      var base = "/";
+      var m = path.match(/^\/([^\/]+)\//); // catches "/RepoName/" for project pages
+      if (m) base = "/" + m[1] + "/";
+      var resumeURL = base + "resume.pdf";
+      var photoURL  = base + "headshot.jpg";
+      document.querySelectorAll('a[data-resume]').forEach(a => {
+        a.href = resumeURL;
+        a.rel = "noopener";
+        a.target = "_blank";
+      });
+      var img = document.getElementById("heroPhoto");
+      if (img) img.src = photoURL;
+    })();
   </script>
 </body>
 </html>
