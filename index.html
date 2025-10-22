@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nithin Deepa — Portfolio</title>
+  <meta name="description" content="Portfolio of Nithin Deepa — Junior CS & IT student skilled in Python, SQL, Java, and Data Analytics with software development experience." />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui","-apple-system"] },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.06)' }
+        }
+      }
+    }
+  </script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { background-color: #ffffff; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    html { scroll-behavior: smooth; }
+    .avatar { clip-path: path('M24 0h168a24 24 0 0 1 24 24v168a24 24 0 0 1-24 24H24a24 24 0 0 1-24-24V24A24 24 0 0 1 24 0z'); }
+    .chip { @apply px-2 py-1 rounded-lg bg-neutral-100 text-sm; }
+  </style>
+</head>
+<body class="font-sans text-neutral-800">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-100">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#top" class="font-extrabold tracking-tight text-xl">Nithin<span class="text-neutral-400">.</span></a>
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#about" class="px-3 py-2 rounded-xl hover:bg-neutral-100 transition">About</a>
+        <a href="#skills" class="px-3 py-2 rounded-xl hover:bg-neutral-100 transition">Skills</a>
+        <a href="#projects" class="px-3 py-2 rounded-xl hover:bg-neutral-100 transition">Projects</a>
+        <a href="#experience" class="px-3 py-2 rounded-xl hover:bg-neutral-100 transition">Experience</a>
+        <a href="#contact" class="px-3 py-2 rounded-xl hover:bg-neutral-100 transition">Contact</a>
+        <a href="resume.pdf" target="_blank" class="px-4 py-2 rounded-xl bg-black text-white hover:opacity-90 transition shadow-soft">Download Résumé</a>
+      </div>
+      <div class="sm:hidden">
+        <a href="resume.pdf" target="_blank" class="px-3 py-2 rounded-xl bg-black text-white text-sm">Résumé</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="reveal min-h-[70vh] grid md:grid-cols-2 gap-10 items-center py-16">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Hi, I’m Nithin Deepa<span class="text-neutral-400">.</span></h1>
+        <p class="mt-4 text-lg text-neutral-600">Junior CS & IT Student • Software Development • Data Analytics</p>
+        <p class="mt-4 text-neutral-600">Skilled in Python, SQL, Java, and building data‑driven apps. I’ve led projects like a Python Quiz App with real‑time analytics, a Flask Expense Tracker with secure CRUD, and a Sales Insights Dashboard. I’m seeking Software Development or Data Analytics internships.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="resume.pdf" target="_blank" class="px-4 py-2 rounded-xl bg-black text-white hover:opacity-90 transition shadow-soft">Get My Résumé</a>
+          <a href="https://github.com/ndeepa-cloud" target="_blank" class="px-4 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">GitHub</a>
+          <a href="#about" class="px-4 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">About Me</a>
+        </div>
+        <div class="mt-4 text-sm text-neutral-500">United States · <a href="mailto:deepanithinroy9@gmail.com" class="underline">deepanithinroy9@gmail.com</a> · <a href="tel:+12709174048" class="underline">(270) 917‑4048</a></div>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <!-- Put a headshot named headshot.jpg in the repo root or point to an external URL -->
+        <img src="headshot.jpg" alt="Nithin portrait" class="avatar w-64 h-64 object-cover shadow-soft" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="reveal py-16 border-t border-neutral-100">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1">
+          <h2 class="text-2xl sm:text-3xl font-bold">About Me</h2>
+          <p class="mt-3 text-neutral-600">Snapshot of who I am and what I do.</p>
+        </div>
+        <div class="lg:col-span-2 space-y-4">
+          <p>I’m pursuing a B.S. in Computer Science & Information Technology (2023–2027) at Murray State University (Murray, KY). I enjoy taking projects from idea to deployment with clean UIs, reliable backends, and measurable outcomes. Leadership matters to me — I serve as President of the Indian Students Association, organizing campus events and driving participation.</p>
+          <ul class="list-disc list-inside text-neutral-700">
+            <li>Coursework: Data Structures, Algorithms, SDLC, Java, AI, Machine Learning, Data Science, Mathematics.</li>
+            <li>GPA: 3.42/4.0 (Undergraduate); 4.0 (High School).</li>
+            <li>Actively seeking Software Development / Data Analytics internships.</li>
+          </ul>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="px-4 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Contact me on LinkedIn</a>
+            <a href="mailto:deepanithinroy9@gmail.com" class="px-4 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Email Me</a>
+            <a href="https://ndeepa-cloud.github.io/" target="_blank" class="px-4 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="reveal py-16 border-t border-neutral-100">
+      <h2 class="text-2xl sm:text-3xl font-bold">Skills & Competencies</h2>
+      <p class="mt-3 text-neutral-600">Tech I work with and what I bring to teams.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold">Core Competencies</h3>
+          <div class="mt-3 flex flex-wrap gap-2 text-neutral-700">
+            <span class="chip">SDLC</span>
+            <span class="chip">Requirement Analysis</span>
+            <span class="chip">Data Analysis</span>
+            <span class="chip">Machine Learning (Basic)</span>
+            <span class="chip">Algorithm Design</span>
+            <span class="chip">Database & SQL</span>
+            <span class="chip">Cloud Deployment</span>
+            <span class="chip">Testing & Debugging</span>
+            <span class="chip">Documentation & Presentation</span>
+          </div>
+          <h3 class="mt-6 font-semibold">Soft Skills</h3>
+          <div class="mt-3 flex flex-wrap gap-2 text-neutral-700">
+            <span class="chip">Problem Solving</span>
+            <span class="chip">Communication</span>
+            <span class="chip">Time Management</span>
+            <span class="chip">Public Speaking</span>
+            <span class="chip">Team Player</span>
+            <span class="chip">Adaptability</span>
+            <span class="chip">Continuous Learning</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold">Tech Stack</h3>
+          <div class="mt-3 flex flex-wrap gap-2 text-neutral-700">
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">C++</span>
+            <span class="chip">C</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Scikit‑learn</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">PyTorch</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Seaborn</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Azure</span>
+            <span class="chip">GCP</span>
+            <span class="chip">Linux/Unix</span>
+            <span class="chip">Git</span>
+            <span class="chip">Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="reveal py-16 border-t border-neutral-100">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Projects</h2>
+          <p class="mt-3 text-neutral-600">A few things I’ve built.</p>
+        </div>
+        <a href="https://github.com/ndeepa-cloud" target="_blank" class="px-4 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">All Repos →</a>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <!-- Python Quiz Application -->
+        <article class="reveal p-6 rounded-2xl border border-neutral-200 hover:shadow-soft transition bg-white">
+          <h3 class="font-semibold text-lg">Python Quiz Application (Tkinter + JSON) — Team Lead</h3>
+          <p class="mt-2 text-neutral-600">GUI quiz app with automated scoring, secure input handling, and real‑time analytics using Matplotlib & Seaborn. Applied OOP and Agile for maintainability.</p>
+          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
+            <span class="chip">Python</span><span class="chip">Tkinter</span><span class="chip">OOP</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="px-3 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Demo</a>
+            <a href="#" class="px-3 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Code</a>
+          </div>
+        </article>
+        
+        <!-- Expense Tracker -->
+        <article class="reveal p-6 rounded-2xl border border-neutral-200 hover:shadow-soft transition bg-white">
+          <h3 class="font-semibold text-lg">Expense Tracker (Flask + SQLite)</h3>
+          <p class="mt-2 text-neutral-600">Full‑stack web app for logging & managing personal expenses with secure CRUD. Includes CSV export for reporting. Built with RESTful design principles.</p>
+          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
+            <span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">REST</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="px-3 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Demo</a>
+            <a href="#" class="px-3 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Code</a>
+          </div>
+        </article>
+
+        <!-- Data Analytics Dashboard -->
+        <article class="reveal p-6 rounded-2xl border border-neutral-200 hover:shadow-soft transition bg-white">
+          <h3 class="font-semibold text-lg">Data Analytics Dashboard (Python + Pandas)</h3>
+          <p class="mt-2 text-neutral-600">Sales data exploration and visualization with Pandas, NumPy, and Matplotlib to generate actionable insights. Lightweight dashboard simulating BI use cases.</p>
+          <div class="mt-3 flex gap-2 flex-wrap text-sm text-neutral-600">
+            <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="px-3 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Demo</a>
+            <a href="#" class="px-3 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-50 transition">Code</a>
+          </div>
+        </article>
+
+        <!-- Additional Projects -->
+        <article class="reveal p-6 rounded-2xl border border-neutral-200 hover:shadow-soft transition bg-white">
+          <h3 class="font-semibold text-lg">Additional Projects</h3>
+          <ul class="mt-2 list-disc list-inside text-neutral-700">
+            <li>Java Library Management System — Console‑based OOP for book/member tracking.</li>
+            <li>SQL Labs — Schemas, joins, aggregations, and reporting using AdventureWorksDW.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience & Leadership -->
+    <section id="experience" class="reveal py-16 border-t border-neutral-100">
+      <h2 class="text-2xl sm:text-3xl font-bold">Experience & Leadership</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <article class="p-6 rounded-2xl border border-neutral-200 bg-white">
+          <h3 class="font-semibold">Computer Science & Mathematics Tutor — Superprof</h3>
+          <p class="text-sm text-neutral-500">2024–Present · Remote</p>
+          <ul class="mt-3 list-disc list-inside text-neutral-700 space-y-1">
+            <li>Personalized tutoring in Python, Java, SQL, and problem‑solving techniques.</li>
+            <li>Adapted teaching strategies to different learning styles and reinforced real‑world coding.</li>
+            <li>Progress tracking and feedback improved academic performance and technical proficiency.</li>
+          </ul>
+        </article>
+        <article class="p-6 rounded-2xl border border-neutral-200 bg-white">
+          <h3 class="font-semibold">President — Indian Students Association (ISA)</h3>
+          <p class="text-sm text-neutral-500">2024–Present · Murray State University</p>
+          <ul class="mt-3 list-disc list-inside text-neutral-700 space-y-1">
+            <li>Led a 4‑member team to organize cultural & technical events, boosting participation ~30%.</li>
+            <li>Drove data‑informed planning using attendee insights and feedback loops.</li>
+            <li>Owned logistics, communication, and cross‑functional coordination across campus groups.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="p-6 rounded-2xl border border-neutral-200 bg-white">
+          <h3 class="font-semibold">Achievements</h3>
+          <ul class="mt-3 list-disc list-inside text-neutral-700 space-y-1">
+            <li>Leadership Excellence: Grew participation by ~30% via ISA initiatives.</li>
+            <li>Professional Growth: One‑on‑one tutoring improved student outcomes.</li>
+            <li>Academic Merit: 3.42 GPA undergraduate; 4.0 GPA high school.</li>
+          </ul>
+        </article>
+        <article class="p-6 rounded-2xl border border-neutral-200 bg-white">
+          <h3 class="font-semibold">Certifications</h3>
+          <ul class="mt-3 list-disc list-inside text-neutral-700 space-y-1">
+            <li>Python Programming — GP intuition (2023)</li>
+            <li>C Programming — GP intuition (2023)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="reveal py-16 border-t border-neutral-100">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold">Let’s connect.</h2>
+        <p class="mt-3 text-neutral-600">The fastest way to reach me is on LinkedIn. I’m open to internships and project collaborations.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition shadow-soft">Contact me on LinkedIn</a>
+          <a href="mailto:deepanithinroy9@gmail.com" class="px-5 py-3 rounded-2xl border border-neutral-300 hover:bg-neutral-50 transition">Email</a>
+          <a href="resume.pdf" target="_blank" class="px-5 py-3 rounded-2xl border border-neutral-300 hover:bg-neutral-50 transition">Résumé</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with social/app icons -->
+  <footer class="reveal border-t border-neutral-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <p class="text-neutral-500 text-sm">© <span id="year"></span> Nithin Deepa. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <!-- Portfolio -->
+          <a href="https://ndeepa-cloud.github.io/" target="_blank" class="group" aria-label="Portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-neutral-600 group-hover:text-black transition"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 17.93V18a1 1 0 1 0-2 0v1.93A8.001 8.001 0 0 1 4.07 13H6a1 1 0 1 0 0-2H4.07A8.001 8.001 0 0 1 11 4.07V6a1 1 0 1 0 2 0V4.07A8.001 8.001 0 0 1 19.93 11H18a1 1 0 1 0 0 2h1.93A8.001 8.001 0 0 1 13 19.93Z"/></svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/ndeepa-cloud" target="_blank" class="group" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-neutral-600 group-hover:text-black transition"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.12.82-.26.82-.58l-.01-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.84 1.31 3.53 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.9 0-1.3.47-2.37 1.24-3.21-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.21 0 4.58-2.81 5.6-5.49 5.9.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.22.7.82.58A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/nithin-deepa-a246a0287/" target="_blank" class="group" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-neutral-600 group-hover:text-black transition"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764s1.75.79 1.75 1.764c0 .974-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.028-3.058-1.863-3.058-1.865 0-2.151 1.458-2.151 2.965v5.697h-3v-10h2.879v1.367h.041c.401-.76 1.38-1.561 2.84-1.561 3.038 0 3.604 2.001 3.604 4.603v5.591z"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:deepanithinroy9@gmail.com" class="group" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-neutral-600 group-hover:text-black transition"><path d="M12 13.065 0 6.75V6a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v.75l-12 6.315Zm0 2.37L0 9.12V18a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V9.12l-12 6.315Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: year + reveal on scroll -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+
